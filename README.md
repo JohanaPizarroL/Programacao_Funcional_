@@ -35,3 +35,35 @@ Podemos também compilar o código direto usando:
 ghc arquivo.hs
 ```
 Essa linha de comando compilará o arquivo **arquivo.hs** diretamente para um executável com o mesmo **nome do arquivo fonte**, no caso **arquivo**. Se você quiser especificar um nome diferente para o executável, pode usar a opção -o como você mencionou anteriormente
+
+##
+
+## Imprimir na tela
+1. **show**: converte um valor em sua representação de string. Ela é frequentemente usada para converter valores para strings antes de serem impressos na tela ou concatenados com outras strings. 
+```
+show 42  -- Retorna "42"
+```
+
+2. **print**:  é uma função em Haskell que recebe um valor e o imprime na saída padrão, seguido por uma nova linha. Ela é útil para depuração e para imprimir valores de forma rápida e fácil. A função print usa a função show para converter o valor em sua representação de string. Por exemplo:
+
+```
+print 42  -- Imprime "42\n" na tela
+```
+
+3. **putStrLn**: é usada para imprimir uma string na tela, seguida por uma nova linha. Ela não converte o valor em uma string, portanto, se você deseja imprimir um valor que não é uma string, precisa convertê-lo para uma string usando show antes de usar putStrLn. Por exemplo:
+```
+putStrLn "Hello, World!"  -- Imprime "Hello, World!" seguido por uma nova linha
+```
+
+**Resumindo**
+* **show** - converte um valor para sua representação de string
+* **print** - imprime um valor na tela (após convertê-lo em uma string usando show)
+* **putStrLn** - imprime uma string na tela, sem a necessidade de conversão prévia
+
+
+
+
+
+
+
+
