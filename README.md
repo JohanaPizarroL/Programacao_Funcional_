@@ -6,6 +6,10 @@
  ```
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ```
+* Para Windows direto no PowerShell
+ ```
+Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; try { Invoke-Command -ScriptBlock ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -ArgumentList $true } catch { Write-Error $_ }
+  ```
 
 A instalação do Haskell vem com duas ferramentas importantes o ghci que é uma ferramenta interativa para explorar o Haskell e o ghc que compila um código-fonte em executável.
 
